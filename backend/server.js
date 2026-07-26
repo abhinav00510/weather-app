@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 app.use(cors());
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // API route
 app.get("/weather/:city", async (req, res) => {
